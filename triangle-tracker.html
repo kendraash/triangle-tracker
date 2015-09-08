@@ -10,22 +10,32 @@
   <body>
     <div class="container">
       <h1>Triangle Tracker</h1>
+
+      <h3>Please enter three side lengths to find out if its a triangle?</h3>
       <form id="triangle-tracker">
         <div class="form-group">
-          <label for="a">Enter length of side a:</label>
+          <label for="a">Side a:</label>
           <input type="text" id="a">
-          <label for="b">Enter length of side b:</label>
+        </div>
+        <div class = "form-group">
+          <label for="b">Side b:</label>
           <input type="text" id="b">
-          <label for="c">Enter length of side c:</label>
+        </div>
+        <div class="form-group">
+          <label for="c">Side c:</label>
           <input type="text" id="c">
         </div>
 
         <button type="submit" class="btn">Find out!</button>
       </form>
 
+      <svg height="210" width="500">
+        <polygon points ="<span class='a'>,</span><span class='b'>,</span><span class='c'></span>" style="fill:lime;stroke:purple;stroke-width:1" />
+    </svg>
+
       <div id="result">
 
-        <p><span class="triangle"></span> is a <span class= "result"></span></p>
+        <p><span class="triangle"></span> is <span class= "result"></span></p>
       </div>
     </div>
   </body>

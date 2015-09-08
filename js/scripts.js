@@ -3,18 +3,18 @@ var triangleTracker = function(a, b, c) {
     //return true;
     var type;
     if (a===b && b===c) {
-      return "equilateral"
+      return "a equilateral"
 
     } else if (a===b || b===c || a===c) {
-        type = "isosceles";
+        type = "a isosceles";
         return true;
     } else {
-      type = "scalene";
+      type = "a scalene";
       return true;
     }
   }
   else {
-    type = "fake triangle";
+    type = "not a triangle";
   }
   return type;
 };
@@ -27,26 +27,12 @@ $(document).ready(function() {
 
     var result = triangleTracker(a, b, c);
 
-    //
     var triangle = [a, b, c]
-    // var equilateral = (a === b === c)
-    // var scalene = (a===b || b===c || a===c)
-    // var isosceles = (a===b && b===c)
+    $(".a").text(a);
+    $(".b").text(b);
+    $(".c").text(c);
     $(".triangle").text(triangle);
-    // if (!result) {
-    //   $(".not").text("not");
-    // } else {
-    //   $(".not").text("")
-    // }
-
     $(".result").text(result);
-
-    // if (result == 'equilateral') {
-    //   $(".equilateral").text(result)
-    // } else {
-    //   $(".equilateral").text("")
-    // }
-
     $("#result").show();
     event.preventDefault();
   })
