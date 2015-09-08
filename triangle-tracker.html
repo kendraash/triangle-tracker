@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Triangle Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Triangle Tracker</h1>
+      <form id="triangle-tracker">
+        <div class="form-group">
+          <label for="a">Enter length of side a:</label>
+          <input type="text" id="a">
+          <label for="b">Enter length of side b:</label>
+          <input type="text" id="b">
+          <label for="c">Enter length of side c:</label>
+          <input type="text" id="c">
+        </div>
+
+        <button type="submit" class="btn">Find out!</button>
+      </form>
+
+      <div id="result">
+        <p><span class="triangle"></span> is <span class="not"></span> a triangle.</p>
+        <p><span class="triangle"></span> is a <span class= "equilateral"></span> <span class="scalene"></span> <span class="isosceles"></span></p>
+      </div>
+    </div>
+  </body>
+</html>
