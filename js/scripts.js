@@ -26,11 +26,14 @@ $(document).ready(function() {
     var c = parseInt($("input#c").val());
 
     var result = triangleTracker(a, b, c);
-
+    var pointA = "0,0 ";
+    var pointB = "0," + (a*30) + " ";
+    var pointC = ((b*30) + "," + (c*30));
     var triangle = [a, b, c]
-    $(".a").text(a);
-    $(".b").text(b);
-    $(".c").text(c);
+// document.write(pointA + pointB + pointC);
+    var string = '<svg id="polygon" height="310" width="600"><polygon points="' + pointA + pointB + pointC + '" style="fill:lime;stroke:purple;stroke-width:1" /></svg>';
+    $(".polygon").append(string);
+
     $(".triangle").text(triangle);
     $(".result").text(result);
     $("#result").show();
